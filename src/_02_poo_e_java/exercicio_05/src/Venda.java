@@ -13,24 +13,21 @@ public class Venda {
         return valorDaVenda;
     }
 
-    public void setValorDaVenda(double valorDaVenda) {
-        this.valorDaVenda = valorDaVenda;
-    }
-
     public Veiculo getVeiculoVendido() {
         return veiculoVendido;
-    }
-
-    public void setVeiculoVendido(Veiculo veiculoVendido) {
-        this.veiculoVendido = veiculoVendido;
     }
 
     public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    @Override
+    public String toString() {
+        return "Venda{" +
+                "valorDaVenda=" + getValorDaVenda() +
+                ", veiculoVendido=" + getVeiculoVendido().getModelo() +
+                ", cliente=" + getCliente().getNome() +
+                '}';
     }
 
 }

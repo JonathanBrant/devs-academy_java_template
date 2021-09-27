@@ -52,4 +52,5 @@ public class Veiculo {
     public void setQuilometragem(int quilometragem) {
         this.quilometragem = quilometragem;
     }
+
 }

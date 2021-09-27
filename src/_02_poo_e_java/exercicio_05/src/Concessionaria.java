@@ -1,20 +1,13 @@
 public class Concessionaria {
-    public Venda getVenda() {
-        return venda;
-    }
 
-    public void setVenda(Venda venda) {
-        this.venda = venda;
-    }
-
-    private Venda venda;
-
-    public Concessionaria(Venda venda) {
-        this.venda = venda;
-    }
+    Venda[] registroDeVendas = new Venda[2];
+    int numeroDeVendas = 0;
 
     public void registrarVenda(Venda venda) {
-        System.out.println("Veiculo " + venda.getVeiculoVendido() + " vendido ao cliente "
-                + venda.getCliente() + " no valor de " + venda.getValorDaVenda() );
+        registroDeVendas[numeroDeVendas] = new Venda(venda.getCliente(), venda.getVeiculoVendido(), venda.getValorDaVenda());
+        numeroDeVendas++;
+        for (Venda vendas : registroDeVendas) {
+            System.out.println(vendas);
+        }
     }
 }
