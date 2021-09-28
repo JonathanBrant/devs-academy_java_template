@@ -4,10 +4,12 @@ public class Concessionaria {
     int numeroDeVendas = 0;
 
     public void registrarVenda(Venda venda) {
-        registroDeVendas[numeroDeVendas] = new Venda(venda.getCliente(), venda.getVeiculoVendido(), venda.getValorDaVenda());
-        numeroDeVendas++;
-        for (Venda vendas : registroDeVendas) {
-            System.out.println(vendas);
+        if (numeroDeVendas < registroDeVendas.length) {
+            registroDeVendas[numeroDeVendas] = new Venda(venda.getCliente(), venda.getVeiculoVendido(), venda.getValorDaVenda());
+            numeroDeVendas++;
+            }
+            for (Venda vendas : registroDeVendas) {
+                System.out.println(vendas);
         }
     }
 }
